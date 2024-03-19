@@ -1,6 +1,6 @@
 #Lanzar gitea en modo docker (No es lo mejor, pero es lo que hay), y fundamental, en la red de minikube
 
-docker run --name gitea  -p 2222:22 -p 3000:3000 -e GITEA__security__INSTALL_LOCK=true -d --network=minikube mguazzardo/custom-gitea-argocd-locura
+docker run --name gitea  -p 2222:22 -p 3000:3000 -e GITEA__security__INSTALL_LOCK=true -d --network=minikube --ip=192.168.49.3 mguazzardo/custom-gitea-argocd-locura
 
 
 #Clonar
