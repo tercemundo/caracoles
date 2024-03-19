@@ -1,0 +1,5 @@
+we have set up a simple planet application against the third world repository.
+
+Then we made modifications, on the version and the amount of planets that it shows, and on the type of service, since we use metallb, we passed from NodeType to LoadBalancer.
+
+We continue playing

@@ -1,0 +1,12 @@
+#Lanzar gitea en modo docker (No es lo mejor, pero es lo que hay), y fundamental, en la red de minikube
+
+docker run --name gitea  -p 2222:22 -p 3000:3000 -e GITEA__security__INSTALL_LOCK=true -d --network=minikube mguazzardo/custom-gitea-argocd-locura
+
+
+#Clonar
+
+
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone ssh://git@localhost:2222/root/prueba01.git
+
+
+#En la parte de sync del argocd, usar la ip que da la salida de docker 
